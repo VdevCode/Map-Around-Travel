@@ -1,0 +1,41 @@
+import {
+  AppBar,
+  Autocomplete,
+  Box,
+  InputBase,
+  Toolbar,
+  Typography,
+} from "@mui/material";
+import SearchIcon from "@material-ui/icons/Search";
+
+import React from "react";
+
+const Header = () => {
+  return (
+    <AppBar position="static">
+      <Toolbar className={classes.toolbar}>
+        <Typography variant="h5" className={classes.title}>
+          gg maap
+        </Typography>
+        <Box display="flex">
+          <Typography variant="h6" className={classes.title}>
+            explore new places
+          </Typography>
+          <Autocomplete>
+            <div className={classes.search}>
+              <div className={classes.searchIcon}>
+                <SearchIcon />
+              </div>
+              <InputBase
+                placeholder="Search..."
+                classes={{ root: classes.inputRoot, input: classes.inputInput }}
+              ></InputBase>
+            </div>
+          </Autocomplete>
+        </Box>
+      </Toolbar>
+    </AppBar>
+  );
+};
+
+export default Header;
